@@ -22,4 +22,4 @@ jobs:
           cache: "yarn"
       - run: yarn
       - run: yarn build
-      - run: pm2 restart CIA
+      - run: pm2 restart example
