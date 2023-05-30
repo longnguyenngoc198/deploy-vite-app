@@ -24,6 +24,11 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: "yarn"
+      - run: cd
+      - run: cd deploy-vite-app/
+      - run: git checkout main
+      - run: git pull
       - run: yarn
       - run: yarn lint
       - run: yarn build
+      - run: pm2 restart 1
